@@ -1,24 +1,41 @@
-# Postgres Starter
+# School API
 
-A simple postgres starter for Project IDX.
+An API for managing schools, courses, and students.
 
-> NOTE: You might have to reload the window once the dependencies are installed for the SQLConnection extension to work as expected
+## Installation
 
+1. Clone the repository.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Set up the database by running the prisma migrations:
+   ```bash
+   npx prisma migrate dev
+   ```
 
-## Connect to DB
+## Running the application
 
-To connect to the DB, run the following command in terminal:
+### Development
 
+To run the application in development mode, use the following command:
+
+```bash
+npm run dev
 ```
-psql postgresql://user:mypassword@localhost:5432/youtube?sslmode=disable
-psql (15.7)
-Type "help" for help.
-youtube=# select * from videos limit 2;
+
+### Production
+
+To build and run the application in production mode, use the following commands:
+
+```bash
+npm run build
+npm start
 ```
 
-You can also instead use the SQLDriver extension (already installed) to inspect the DB.
+## API Documentation
 
-## Next steps
+Once the application is running, the Swagger documentation will be available at:
 
-Look at .idx/dev.nix to learn more on the data was loaded in the DB.
-
+[http://localhost:3000/api-docs](http://localhost:3000/api-docs)
+# projeto-escola
